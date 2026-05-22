@@ -1,0 +1,132 @@
+Introduction
+Our pair coding assessment involves building a simple but functional web application with a front-end interface and a supporting API layer alongside one of our software engineers. 
+You will work together as a team to create the finished product, one you driving the keyboard for one aspect of the assessment the other navigating, providing support. 
+The task is designed to assess the your technical skills, planning abilities, and collaboration with another developer.
+You have two hours to complete this task, including any planning or research. Following the two hours there will be a brief review of the code and functionality, discussing any challenges faced and how they were addressed.
+You will only find out what the web application is when you start the challenge.
+
+
+Requirements
+You will need:
+a Github account;
+Microsoft Teams installed and running on your machine with an active account;
+Git installed and running on your machine;
+Docker installed and running on your laptop; and,
+an IDE.
+Any other software you think will help you code or communicate effectively.
+As all of the software you build will be run inside the Docker container we will provide you at the start of the assessment you won’t need any additional software on your machine.
+Tech stacks
+Your application will consist of three layers; a front-end an API and somewhere to persist data.
+When you assess the task you will need to determine the best software or combination of software on which to run your application. There is no right answer, all of the options can do it, but you’ll need to justify your choices.
+You’ll be using at least two of:
+NodeJS + Express (+ VueJS)
+NodeJS + Fastify (+ VueJS)
+NodeJS + VueJS
+Python + Flask (+ VueJS)
+Python + Django (+ VueJS)
+PHP + Laravel (+ VueJS)
+PHP + Slim (+ VueJS)
+You can use any suitable component library to assist you in delivering features.
+You may also need to use one of the following systems for persisting your data:
+MySQL
+MongoDB
+In-memory storage
+Memcached
+Flat file
+You will share your work in a Github repository that we will provide, and the code will run in a Docker environment we will have set up as part of that repository.
+What to expect
+We are not trying to trick you or put you under unusual pressure. Our main goal is to see how you solve problems, work with other people and prioritise your work under strict time constraints.
+It will be (fairly) relaxed and informal and you’re encouraged to ask questions and seek clarification.
+Whilst you carry out your challenge you’ll be watched by one of our senior team members.
+We don’t expect you to remember the name of every function you’ll need, or the order of the parameters so it’s fine to Google for assistance, however asking an LLM ML system to solve your problems is probably taking it a bit too far.
+The assessment will happen remotely over a Teams call with screen sharing. If you’d prefer to do the challenge in-person in our offices we are happy to arrange that.
+Preparing for your assessment
+Ensure you have all the required software on your machine.
+Have at least some idea of all the software you might need to use.
+Ensure you are prepared for load-shedding and have alternative internet connectivity just in case.
+You’ll start your assessment pulling a Github repository and spinning up your mostly pre-build Docker containers, the more proficient you are at that, the more time you’ll have for other stuff.
+Bring water and snacks, we want you to be hydrated and fueled.
+ 
+Related content
+ 
+ 
+ 
+https://github.com/RSAWEB/library-coding-challenge
+RSAWEB/library-coding-challenge
+RSAWEB pair-coding challenge to create a library
+ 
+
+
+
+The Book Library Web App
+This Book Library challenge involves building a simple but functional application with a front-end interface and a supporting API layer. The task is designed to assess the your technical skills, planning abilities, and collaboration with another developer.
+You have two hours to complete this task, including any planning or research. Following the two hours there will be a brief review of the code and functionality, discussing any challenges faced and how they were addressed.
+
+
+### Functional requirements
+The primary requirement for this app is for users to be able to check-out and check-in books.
+User Interface
+Allow users to add new books to the library through a form with at least the title and author.
+Display a list of all books with details such as title, author, and status (available or checked out).
+Enable users to search for books by title or author.
+Provide functionality to check out and return books.
+
+###API Endpoints
+PUT /books/:id/checkout: Check-out a book.
+PUT /books/:id/return: Check-in a book.
+GET /books: Retrieve all books.
+POST /books: Add a new book.
+GET /books/search?query={query}: Search for books by title or author.
+
+Data Storage
+Use a simple in-memory data structure (e.g., a dictionary or list) to store book details, with an option to use a persistent database if time permits.
+Technology Stack
+
+The front-end and API layer must use different tech stacks but can be chosen from any of the following, based on your assessment of the most suitable technology:
+NodeJS + Express
+NodeJS + Fastify
+NodeJS + VueJS
+Python + Flask
+Python + Django
+PHP + Laravel
+PHP + Slim
+You can use any suitable component library to assist you in delivering features.
+Database
+You can use any of the following systems for persisting your data:
+MySQL
+MongoDB
+In-memory storage
+Memcached
+Flat file
+Docker
+Your work must run in a Docker container or containers.
+
+
+
+### User Stories
+As a user, I want to add a new book to the library:
+When I visit the add book page, I can input the book's title, author, and initial status (available).
+After submitting the form, the book appears in the library list.
+As a user, I want to view a list of all books in the library:
+When I visit the library page, I see a list of all books with their titles, authors, and status (available or checked out).
+As a user, I want to search for books by title or author:
+When I enter a search query on the library page, I see a list of books that match the query.
+As a user, I want to check out a book:
+When I view the details of an available book, I see an option to check out the book.
+After checking out the book, its status changes to checked out, and this is reflected in the library list.
+As a user, I want to return a book:
+When I view the details of a checked-out book, I see an option to return the book.
+After returning the book, its status changes to available, and this is reflected in the library list.
+Success criteria
+User Interaction and Experience
+The user interface is intuitive and easy to navigate.
+Users can successfully add, view, search, check out, and return books.
+The application is responsive and works well on both desktop and mobile devices.
+API Functionality
+All endpoints are implemented and functional.
+The API correctly handles requests and returns appropriate responses.
+Collaboration and Communication
+The developers must chose one of the systems each on which to drive the keyboard.
+Both developers contribute meaningfully to the project.
+Technical Proficiency
+The code is clean, well-structured, and follows best practices.
