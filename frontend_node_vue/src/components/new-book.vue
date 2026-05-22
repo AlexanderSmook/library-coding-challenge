@@ -26,6 +26,9 @@ function onSubmit() {
   if(authorError.value || bookNameError.value) return
 
   fetch('http://localhost:4000/books/', {
+    headers: {
+      'Content-Type': 'application/json',
+    },
     body: JSON.stringify({
       title: bookName.value,
       author: authorName.value,
