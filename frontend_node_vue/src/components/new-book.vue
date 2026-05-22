@@ -25,7 +25,15 @@ function onSubmit() {
 
   if(authorError.value || bookNameError.value) return
 
-  
+  fetch('http://localhost:4000/books/', {
+    body: JSON.stringify({
+      title: bookName.value,
+      author: authorName.value,
+    }),
+    method: 'POST',
+  }).then((res) => {
+    console.log(res)
+  })
 }
 </script>
 
