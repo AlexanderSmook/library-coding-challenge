@@ -1,0 +1,20 @@
+services:
+    frontend:
+        container_name: frontend
+        build:
+            context: .
+            dockerfile: Dockerfile
+        volumes:
+            - .:/frontend/
+            - /frontend/vendor
+
+        ports:
+            - "3000:3000"
+        networks:
+            - rsaweb
+        tty: true
+
+networks:
+    rsaweb:
+        name: rsaweb
+        external: true

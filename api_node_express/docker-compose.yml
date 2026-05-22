@@ -1,0 +1,19 @@
+services:
+    api:
+        container_name: api
+        build:
+            context: .
+            dockerfile: Dockerfile
+        volumes:
+            - .:/api/
+            - /api/node_modules
+        ports:
+            - "4000:4000"
+        networks:
+            - rsaweb
+        tty: true
+
+networks:
+    rsaweb:
+        name: rsaweb
+        external: true

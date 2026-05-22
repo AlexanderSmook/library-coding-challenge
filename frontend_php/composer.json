@@ -1,0 +1,17 @@
+{
+    "name": "rsaweb/library-coding-challenge",
+    "description": "Library Coding Challenge",
+    "repositories":[
+    ],
+    "require": {
+    },
+    "require-dev": {
+    },
+    "extra": {
+    },
+    "config": {
+        "platform": {
+            "php": "8"
+        }
+    }
+}

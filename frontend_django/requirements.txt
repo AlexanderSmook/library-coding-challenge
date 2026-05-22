@@ -1,0 +1,9 @@
+django>=4.2  # Stable version of Django
+djangorestframework>=3.14  # If you plan on building APIs
+psycopg2>=2.9  # PostgreSQL support 
+mysqlclient>=2.2  # MySQL support 
+whitenoise>=6.5  # Serve static files in production
+django-environ>=0.10 # For environment variable management
+django-crispy-forms>=1.14  # For better forms 
+pillow>=9.5  # For image handling
+redis>=5.0  # If using Redis as a broker or cache backend
