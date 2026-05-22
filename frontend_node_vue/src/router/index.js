@@ -1,15 +1,22 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
 
-Vue.use(Router)
+import {createRouter, createWebHistory} from 'vue-router'
+import LandingPage from "@/components/landing-page.vue";
+import NewBook from "@/components/new-book.vue";
 
-export default new Router({
+const router = createRouter({
+  history: createWebHistory(),
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
-    }
-  ]
+      name: 'landing',
+      component: LandingPage,
+    },
+    {
+      path: '/new',
+      name: 'new',
+      component: NewBook,
+    },
+  ],
 })
+
+export default router
