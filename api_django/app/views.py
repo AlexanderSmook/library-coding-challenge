@@ -43,3 +43,15 @@ class BookActionView(generics.UpdateAPIView):
         instance.save()
         serializer = self.get_serializer(instance)
         return Response(serializer.data)
+
+
+class BookSearchView(generics.ListAPIView):
+    queryset = Book.objects.all()
+    serializer_class = serializers.BookSerializer
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        search = self.request.query_params.get('query', None)
+        if search:
+            queryset = queryset.filter(title__icontains=search) | queryset.filter(author__icontains=search)
+        return queryset
